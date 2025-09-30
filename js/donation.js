@@ -1,76 +1,112 @@
-document.getElementById('btn-money-donate-1').addEventListener('click', function(event){
-      event.preventDefault()
-      const donatedMoney = parseFloat(document.getElementById('input-donate-money').value);
-      
+document
+  .getElementById("btn-money-donate-1")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    const donatedMoney = parseFloat(
+      document.getElementById("input-donate-money").value
+    );
 
-      if (donatedMoney){
-            const donate = getInputFieldValueById('donated-money');
-            const moneyDonated = donate + donatedMoney;
-            document.getElementById('donated-money').innerText = moneyDonated;
-            
-            const balance = getInputFieldValueById('total-balance')
+    if (donatedMoney) {
+      const donate = getInputFieldValueById("donated-money");
+      const moneyDonated = donate + donatedMoney;
+      document.getElementById("donated-money").innerText = moneyDonated;
 
-            if (donatedMoney > balance){
-                  alert('Your balance is to low!!😢😢')
-                  return;
-            }
+      const balance = getInputFieldValueById("total-balance");
 
-            const newBalance = balance - donatedMoney;
-            document.getElementById('total-balance').innerText = newBalance
-            
+      if (donatedMoney > balance) {
+        alert("Your balance is to low!!😢😢");
+        return;
       }
       
-      else{
-            alert('donate failed');
+      const newBalance = balance - donatedMoney;
+      document.getElementById("total-balance").innerText = newBalance;
+
+      const p = document.createElement('p');
+      const now = new Date();
+      const timeZone = now.toLocaleString('en-US',{timeZone: 'Asia/Dhaka'});
+
+      p.innerText = `You donated: ${donatedMoney} Tk.Your Current Balance: ${newBalance} Time: ${timeZone}`;
+      console.log(p)
+
+      document.getElementById('histiory-container').appendChild(p)
+
+
+    } 
+    
+    else {
+      alert("donate failed");
+    }
+  });
+
+document
+  .getElementById("btn-money-donate-2")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    const donatedMoney = parseFloat(
+      document.getElementById("input-donate-money-2").value
+    );
+    // const donateMoney = getInputFieldValueById('input-donate-money');
+
+    if (donatedMoney) {
+      const donate = getInputFieldValueById("donated-money-2");
+      const moneyDonated = donate + donatedMoney;
+      document.getElementById("donated-money-2").innerText = moneyDonated;
+      const balance = getInputFieldValueById("total-balance");
+
+      if (donatedMoney > balance) {
+        alert("Your balance is to low!!😢😢");
+        return;
       }
-})
 
+      const newBalance = balance - donatedMoney;
+      document.getElementById("total-balance").innerText = newBalance;
 
-document.getElementById('btn-money-donate-2').addEventListener('click', function(event){
-      event.preventDefault()
-      const donatedMoney = parseFloat(document.getElementById('input-donate-money-2').value);
-      // const donateMoney = getInputFieldValueById('input-donate-money');
+      const p = document.createElement('p');
+      const now = new Date();
+      const timeZone = now.toLocaleString('en-US',{timeZone: 'Asia/Dhaka'});
 
-      if (donatedMoney){
-            const donate = getInputFieldValueById('donated-money-2');
-            const moneyDonated = donate + donatedMoney;
-            document.getElementById('donated-money-2').innerText = moneyDonated;
-             const balance = getInputFieldValueById('total-balance')
+      p.innerText = `You donated: ${donatedMoney} Tk.Your Current Balance: ${newBalance} Time: ${timeZone}`;
+      console.log(p)
 
-            if (donatedMoney > balance){
-                  alert('Your balance is to low!!😢😢')
-                  return;
-            }
-            
-            const newBalance = balance - donatedMoney;
-            document.getElementById('total-balance').innerText = newBalance
+      document.getElementById('histiory-container').appendChild(p)
+    } else {
+      alert("donate failed");
+    }
+  });
+
+document
+  .getElementById("btn-money-donate-3")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    const donatedMoney = parseFloat(
+      document.getElementById("input-donate-money-3").value
+    );
+    // const donateMoney = getInputFieldValueById('input-donate-money');
+
+    if (donatedMoney) {
+      const donate = getInputFieldValueById("donated-money-3");
+      const moneyDonated = donate + donatedMoney;
+      document.getElementById("donated-money-3").innerText = moneyDonated;
+      const balance = getInputFieldValueById("total-balance");
+
+      if (donatedMoney > balance) {
+        alert("Your balance is to low!!😢😢");
+        return;
       }
-      else{
-            alert('donate failed');
-      }
-})
 
-document.getElementById('btn-money-donate-3').addEventListener('click', function(event){
-      event.preventDefault()
-      const donatedMoney = parseFloat(document.getElementById('input-donate-money-3').value);
-      // const donateMoney = getInputFieldValueById('input-donate-money');
+      const newBalance = balance - donatedMoney;
+      document.getElementById("total-balance").innerText = newBalance;
 
-      if (donatedMoney){
-            const donate = getInputFieldValueById('donated-money-3');
-            const moneyDonated = donate + donatedMoney;
-            document.getElementById('donated-money-3').innerText = moneyDonated;
-             const balance = getInputFieldValueById('total-balance')
+       const p = document.createElement('p');
+       
+      const now = new Date();
+      const timeZone = now.toLocaleString('en-US',{timeZone: 'Asia/Dhaka'});
 
-            if (donatedMoney > balance){
-                  alert('Your balance is to low!!😢😢')
-                  return;
-            }
-            
-            const newBalance = balance - donatedMoney;
-            document.getElementById('total-balance').innerText = newBalance
-      }
-      else{
-            alert('donate failed');
-      }
-})
+      p.innerText = `You donated: ${donatedMoney} Tk.Your Current Balance: ${newBalance} Time: ${timeZone}`;
+      console.log(p)
 
+      document.getElementById('histiory-container').appendChild(p)
+    } else {
+      alert("donate failed");
+    }
+  })

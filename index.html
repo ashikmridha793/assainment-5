@@ -12,6 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body>
+    <!-- Navbar section start -->
     <nav>
       <div class="navbar bg-gray-300 sticky top-0 shadow-sm">
         <div class="navbar-start">
@@ -20,9 +21,9 @@
               tabindex="0"
               role="button"
               class="btn btn-ghost btn-circle m-10 ml-30"
-            >
+            > 
               <button
-                id="btn-navbar"
+                id="btn-blog"
                 class="btn btn-xl rounded-lg bg-green-400 font-bold text-2xl"
               >
                 Blog
@@ -38,13 +39,15 @@
           <div class="stats shadow mr-10">
             <div class="stat">
               <div class="stat-title font-bold text-2xl">Total Balance</div>
-              <div id="total-balance" class="stat-value">10000</div>
+              <div id="total-balance" class="stat-value flex items-center gap-1">
+                <span><img src="./photos/coin.png" alt=""></span>10000</div>
             </div>
           </div>
         </div>
         </div>
       </div>
     </nav>
+    <!-- Navbar section end -->
     <!-- features start-->
           <div class="grid grid-flow-col gap-10 place-content-center mt-10">
             <button id="show-donation" class="btn btn-lg">Donation</button>
@@ -53,7 +56,7 @@
           <!-- features end-->
     <main>
       <!-- DONATED SECTION START -->
-      <div id="donation-form">
+      <div id="donation-form" class="">
         <!-- section 1 start -->
         <div class="hero">
           <div
@@ -68,7 +71,7 @@
                 <img src="./photos/coin.png" alt="" />
                 <span id="donated-money">0</span> BDT
               </div>
-              <h1 class="text-5xl font-bold">
+              <h1 id="noakhali" class="text-5xl font-bold">
                 Donate for Flood at Noakhali, Bangladesh
               </h1>
               <p class="py-6">
@@ -192,8 +195,18 @@
         <!-- section 3 end -->
       </div>
       <!-- DONATED SECTION START -->
+
+       <!-- history section start -->
+        <div id="history-form" class="hidden">
+          <h1 class="font-bold text-3xl text-center m-20">Your Donation history</h1>
+          <div id="histiory-container" class="text-center ">
+
+          </div>
+        </div>
+       <!-- history section end -->
     </main>
     <script src="./js/utilities.js"></script>
+    <script src="./js/feture.js"></script>
     <script src="./js/donation.js"></script>
     <script src="./js/history.js"></script>
   </body>
