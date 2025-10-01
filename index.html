@@ -14,17 +14,14 @@
   <body>
     <!-- Navbar section start -->
     <nav>
-      <div class="navbar bg-gray-300 sticky top-0 shadow-sm">
+      <div class="navbar bg-gray-300 shadow-sm sticky top-0 z-50 w-full">
         <div class="navbar-start">
           <div class="dropdown">
             <div
-              tabindex="0"
-              role="button"
-              class="btn btn-ghost btn-circle m-10 ml-30"
+              class="flex justify-start"
             > 
-              <button
-                id="btn-blog"
-                class="btn btn-xl rounded-lg bg-green-400 font-bold text-2xl"
+              <button id="btn-blog-page"
+                class="btn btn-xl rounded-lg m-2 bg-green-400 font-bold text-2xl"
               >
                 Blog
               </button>
@@ -33,13 +30,13 @@
         </div>
         <div class="navbar-center">
           <img src="./photos/logo.png" alt="" />
-          <p class="font-bold m-1 text-2xl">Donate Bangladesh</p>
+          <p class="font-bold m-1 text-2xl hidden sm:block md:block">Donate Bangladesh</p>
         </div>
-        <div class="navbar-end">
-          <div class="stats shadow mr-10">
+        <div class="navbar-end justify-end lg:justify-end flex items-end">
+          <div class="stats lg:shadow">
             <div class="stat">
-              <div class="stat-title font-bold text-2xl">Total Balance</div>
-              <div id="total-balance" class="stat-value flex items-center gap-1">
+              <div class="stat-title font-bold text-2xl hidden sm:block">Total Balance</div>
+              <div id="total-balance" class="stat-value flex lg:items-center gap-1">
                 <span><img src="./photos/coin.png" alt=""></span>10000</div>
             </div>
           </div>
@@ -56,7 +53,7 @@
           <!-- features end-->
     <main>
       <!-- DONATED SECTION START -->
-      <div id="donation-form" class="">
+      <div id="donation-form" class="grid grid-flow-row mx-auto my-auto ">
         <!-- section 1 start -->
         <div class="hero">
           <div

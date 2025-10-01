@@ -1,55 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Blog</title>
-       <link
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-<body>
-      <!-- Navbar section start -->
-    <nav>
-      <div class="navbar bg-gray-300 sticky top-0 shadow-sm">
-        <div class="navbar-start">
-          <div class="dropdown">
-            <div
-              tabindex="0"
-              role="button"
-              class="btn btn-ghost btn-circle m-10 ml-30"
+  </head>
+  <body>
+    <!-- Navbar section start -->
+    <nav class="navbar bg-gray-300 sticky top-0 shadow-sm">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <label tabindex="0" class="btn btn-ghost, lg:hidden">
+            <svg
+              
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-              <button
-                class="btn btn-xl rounded-lg bg-green-400 font-bold text-2xl"
-              >
-                Blog
-              </button>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </label>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li><a>History</a></li>
+            <li><a>Donation</a></li>
+          </ul>
+        </div>
+      </div>
+
+      
+      <div class="navbar-center">
+        <img src="./photos/logo.png" class="w-10 h-10" alt="logo" />
+        <p class="sm:hidden, font-bold ml-2 text-xl">Donate Bangladesh</p>
+      </div>
+      <div class="navbar-end hidden lg:flex">
+        <div class="stats shadow ml-4">
+          <div class="stat">
+            <div class="stat-title text-lg">Total Balance</div>
+            <div id="total-balance" class="stat-value flex items-center gap-1">
+              <span><img src="./photos/coin.png" class="w-5" alt="" /></span>
+              10000
             </div>
           </div>
-        </div>
-        <div class="navbar-center">
-          <img src="./photos/logo.png" alt="" />
-          <p class="font-bold m-1 text-2xl">Donate Bangladesh</p>
-        </div>
-        <div class="navbar-end">
-          <div class="stats shadow mr-10">
-            <div class="stat">
-              <div class="stat-title font-bold text-2xl">Total Balance</div>
-              <div id="total-balance" class="stat-value flex items-center gap-1">
-                <span><img src="./photos/coin.png" alt=""></span>10000</div>
-            </div>
-          </div>
-        </div>
         </div>
       </div>
     </nav>
-    <!-- Navbar section end -->
-      <main>
-        <h1 class="font-bold text-5xl lg:ml-20 mt-8"> Important FAQ </h1>
-      </main>
 
-</body>
+    <!-- Navbar section end -->
+    <main class="w-screen">
+      <h1 class="font-bold text-2xl lg:text-5xl ml-20 mt-8">Important FAQ</h1>
+
+      <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title font-semibold">What is dom?</div>
+        <div class="collapse-content text-sm">
+          CThe DOM (Document Object Model) is a programming interface that
+          represents an HTML or XML document as a tree structure, where each
+          element is an object. It allows scripts (like JavaScript) to access,
+          modify, and update the content, structure, and styles of a webpage.
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title font-semibold">
+          How do you select on element on the DOM?
+        </div>
+        <div class="collapse-content text-sm">
+          Click on "Forgot Password" on the login page and follow the
+          instructions sent to your email.
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title font-semibold">
+          How do I update my profile information?
+        </div>
+        <div class="collapse-content text-sm">
+          Go to "My Account" settings and select "Edit Profile" to make changes.
+        </div>
+      </div>
+    </main>
+
+    <script src="./js/addBlog.js"></script>
+  </body>
 </html>

@@ -12,6 +12,9 @@ document
       document.getElementById("donated-money").innerText = moneyDonated;
 
       const balance = getInputFieldValueById("total-balance");
+      if(moneyDonated){
+        alert('successful donate money')
+      }
 
       if (donatedMoney > balance) {
         alert("Your balance is to low!!😢😢");
@@ -52,6 +55,9 @@ document
       const moneyDonated = donate + donatedMoney;
       document.getElementById("donated-money-2").innerText = moneyDonated;
       const balance = getInputFieldValueById("total-balance");
+      if(moneyDonated){
+        alert('successful donate money')
+      }
 
       if (donatedMoney > balance) {
         alert("Your balance is to low!!😢😢");
@@ -88,6 +94,9 @@ document
       const moneyDonated = donate + donatedMoney;
       document.getElementById("donated-money-3").innerText = moneyDonated;
       const balance = getInputFieldValueById("total-balance");
+      if(moneyDonated){
+        alert('successful donate money')
+      }
 
       if (donatedMoney > balance) {
         alert("Your balance is to low!!😢😢");
@@ -110,3 +119,7 @@ document
       alert("donate failed");
     }
   })
+
+document.getElementById('btn-blog-page').addEventListener('click', function(){
+      window.location.href = '/blog.html'
+})
